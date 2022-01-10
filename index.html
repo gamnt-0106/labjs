@@ -7,15 +7,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
   <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+
+  </style>
 </head>
 
 <body>
-  <div id="app"></div>
-  <a href="/">Home Page</a>
-  <a href="/">About Page</a>
-  <a href="/product">Product Page</a>
-  
- 
+  <!-- <div id="app"></div> -->
+  <div class="container mx-auto">
+    <header class="  bg-indigo-900 w-full">
+      <div class="text-center">
+        <img class="mx-auto pt-3 pb-3" width="200px"
+          src="https://phothongcaodang.fpt.edu.vn/wp-content/uploads/LOGO-PTC%C4%90-White-Transparency.png" alt="anh">
+      </div>
+    </header>
+    <div class="menu">
+      <div class="grid grid-cols-12 bg-amber-600 ">
+        <div class="col-span-8 pt-4   ">
+          <ul class="pb-4">
+            <li class="inline-block mr-4 ml-20 text-white"><a href="">Trang chủ</a></li>
+            <li class="inline-block mr-4 text-white"><a href="">Tuyển sinh</a></li>
+            <li class="inline-block mr-4 text-white"><a href="">Chương trình đào tạo</a></li>
+            <li class="inline-block mr-4 text-white"><a href="">Góc nhìn sinh viên</a></li>
+            <li class="inline-block mr-4 text-white"><a href="">Tuyển dụng</a></li>
+          </ul>
+
+        </div>
+        <div class="col-span-4 ml-20">
+          <form action="" class="from-search">
+            <input type="text" class="">
+            <input type="submit" value="Tìm kiếm " class="mt-4  gap-8 bg-indigo-900">
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <div class="banner">
+      <img class="pt-2 w-auto" src="https://caodang.fpt.edu.vn/wp-content/uploads/Banner1-1.png" alt="">
+    </div>
+    <h2 class="font-bold text-3xl pt-4 pb-4 text-cyan-700">Tin Tức Học Tập</h2>
+    <div class="grid grid-cols-3 gap-8">
+      <div class=" border border-gray-300">
+        <img class="pl-4 pr-4 pt-4 pb-4" 
+          src="https://fpteducationgroup.files.wordpress.com/2015/07/trc3aan-230-sinh-vic3aan-fpt-polytechnic-te1bb91t-nghie1bb87p-12.jpg"
+          alt="img">
+          <h3><b class="text-red-700 text-lg"> Vinh danh 295 sinh viên FPT Polytechnic học kỳ Spring 2018</b></h3> 
+        <p class="text-cyan-900  pl-2">Tối ngày 16/06/2018, Cao đẳng FPT Polytechnic Hà Nội đã tổ chức lễ tôn vinh "Ong vàng Poly",
+          tuyên dương 295 cá nhân và tập thể có thành tích xuất sắc trong học tập cũng như hoạt</p>
+
+      </div>
+      <div class=" border border-gray-300">
+        <img class="pl-4 pr-4 pt-4 pb-4" src="https://topsinhvien.vn/wp-content/uploads/2021/03/khach-san.gif" alt="img">
+        <h3><b class="text-red-700 text-lg pl-2">Sinh viên có khối ngành Kinh tế học cách "chạm" vào cảm xúc.</b></h3>
+        <p class="text-cyan-900  pl-2">Với sự tham gia của chuyên gia trong lĩnh vực kinh doanh, chương trình đã thu hút đông đảo sinh viên Cao đẳng
+          FPT Polytechnic tham dự.
+          Đặc biệt các bạn sinh viên bị lôi cuốn bởi</p>
+
+      </div>
+      <div class=" border border-gray-300">
+        <img class="pl-4 pr-4 pt-4 pb-4"
+          src="https://fpteducationgroup.files.wordpress.com/2015/07/trc3aan-230-sinh-vic3aan-fpt-polytechnic-te1bb91t-nghie1bb87p-12.jpg"
+          alt="img">
+
+          <h3><b class="text-red-700 text-lg ">Sinh viên FPoly trải nghiệm thực tế tại Mường Thanh Luxury.</b></h3>
+          <p class="text-cyan-900 pl-2">Với triết lý đào tạo "Thực học - Thực nghiệp", Cao đẳng FPT Polytechnic
+          Đà Nẵng Thường xuyên tổ chức cho sinh viên tham quan các đơn vị doanh nghiệp</p>
+
+      </div>
+    </div>
+    <h2 class="font-bold text-3xl pt-4 pb-4 text-cyan-700">HOẠT ĐỘNG SINH VIÊN</h2>
+    <div class="grid grid-cols-3 gap-8">
+      <div class=" border border-gray-300">
+        <img class="pl-4 pr-4 pt-4 pb-4"
+          src="https://fpteducationgroup.files.wordpress.com/2015/07/trc3aan-230-sinh-vic3aan-fpt-polytechnic-te1bb91t-nghie1bb87p-12.jpg"
+          alt="img">
+          <h3><b class="text-red-700 text-lg pl-2">Vinh danh 295 sinh viên FPT Polytechnic học kỳ Spring 2018</b></h3>
+          <p class="text-cyan-900 pl-2">Tối ngày 16/06/2018, Cao đẳng FPT Polytechnic Hà Nội đã tổ chức lễ tôn vinh "Ong vàng Poly",
+          tuyên dương 295 cá nhân và tập thể có thành tích xuất sắc trong học tập cũng như hoạt</p>
+
+      </div>
+      <div class=" border border-gray-300">
+        <img class="pl-4 pr-4 pt-4 pb-4" src="https://topsinhvien.vn/wp-content/uploads/2021/03/khach-san.gif" alt="img">
+        <h3><b class="text-red-700 text-lg pl-2">Sinh viên có khối ngành Kinh tế học cách "chạm" vào cảm xúc</b></h3>
+        <p class="text-cyan-900 pl-2">Với sự tham gia của chuyên gia trong lĩnh vực kinh doanh, chương trình đã thu hút đông đảo sinh viên Cao đẳng
+          FPT Polytechnic tham dự.
+          Đặc biệt các bạn sinh viên bị lôi cuốn bởi</p>
+
+      </div>
+      <div class=" border border-gray-300">
+        <img class="pl-4 pr-4 pt-4 pb-4" width="100% "
+          src="https://fpteducationgroup.files.wordpress.com/2015/07/trc3aan-230-sinh-vic3aan-fpt-polytechnic-te1bb91t-nghie1bb87p-12.jpg"
+          alt="img">
+          <h3><b class="text-red-700 text-lg pl-2">Sinh viên FPoly trải nghiệm thực tế tại Mường Thanh Luxury.</b></h3>
+          <p class="text-cyan-900 pl-2">Với triết lý đào tạo "Thực học - Thực nghiệp", Cao đẳng FPT Polytechnic
+          Đà Nẵng Thường xuyên tổ chức cho sinh viên tham quan các đơn vị doanh nghiệp</p>
+
+      </div>
+    </div>
+    <footer>
+      <h4 class="mt-7 text-lg text-center bg-indigo-900 font-bold text-white">Tên sinh viên</h4>
+    </footer>
+  </div>
+
   <script type="module" src="./src/main.js"></script>
 </body>
 
