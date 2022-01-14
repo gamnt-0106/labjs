@@ -68,7 +68,7 @@ const NewList = {
           <!-- More people... -->
         </tbody>
       </table>
-      <button class="bg-orange-600 pt-2 pb-2 pr-2 pl-2">Add Product</button>
+     
         `;
     },
 };
