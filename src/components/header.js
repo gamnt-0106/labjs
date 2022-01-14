@@ -1,6 +1,9 @@
 const Header = {
     render() {
         return `
+        <div class="header_top bg-[#272f54] py-[13px]">
+        <a href=""><img src="https://i.imgur.com/5EK1lFm.png" alt="" class="m-auto"></a>
+    </div>
         <div class="bg-orange-500 flex ">
             <ul class="flex">
             <li><a href="/about" class="block px-4 ml-4 py-5 hover:bg-indigo-500 hover:text-orange-700 text-white">Tuyển sinh</a></li>

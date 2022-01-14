@@ -1,8 +1,9 @@
-import { data } from "../../data";
+import data from "../../data";
 
 const NewList = {
     render() {
         return /* html */`
+       
         <table class="min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
           <tr>
@@ -19,7 +20,7 @@ const NewList = {
               Desc
             </th>
             <th scope="col" class="relative px-6 py-3">
-              <span class="sr-only">Edit</span>
+             <a href=""><span class="sr-only">Edit</span></a>
             </th>
           </tr>
         </thead>
@@ -52,11 +53,11 @@ const NewList = {
                <img class="h-10 w-10 rounded-full" src=" ${value.img}" alt="">
               </span>
             </td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            <td class="px-6 py-4  text-sm text-gray-500">
              ${value.desc}
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-              <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+              <a href="/admin/product/edit/${value.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
             </td>
           </tr>
         

@@ -6,7 +6,7 @@ import DetailPage from "./pages/detail";
 import HomePage from "./pages/home";
 import ProductPage from "./pages/product";
 import AdminNewPage from "./pages/admin/news";
-import AdminProductList from "./components/admin/products";
+import editNews from "./pages/admin/edit";
 import Signup from "./pages/signup";
 import Signin from "./pages/signin";
 import Dashboard from "./pages/admin/dashboard";
@@ -38,9 +38,9 @@ router.on({
     "/admin/product": () => {
         print(AdminNewPage.render());
     },
-    "/admin/product/:id/edit": ({ data }) => {
+    "/admin/product/edit/:id": ({ data }) => {
         const { id } = data;
-        print(AdminProductList.render(id));
+        print(editNews.render(id));
     },
     "/signup": () => {
         print(Signup.render());

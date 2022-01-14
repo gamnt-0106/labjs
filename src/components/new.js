@@ -1,4 +1,4 @@
-import { data } from "../data";
+import data from "../data";
 
 const News = {
     render() {
@@ -7,13 +7,16 @@ const News = {
         <div class="grid grid-cols-3 gap-8">
             ${data.map((post) => `
             <div class="border p-3">
-                <img src="${post.img}" alt="" />
-                <h3 class="my-3"><a href="" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
-                <p>${post.desc}</p>
+              <a href="/product/${post.id}">
+              <img src="${post.img}" alt=""/>
+              <h3 class="my-3"><a href="" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
+              <p>${post.desc}</p>
+              </a>
             </div>
             `).join("")}
             
         </div>
+       
         
         `;
     },

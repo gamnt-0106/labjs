@@ -1,4 +1,3 @@
-import Active from "../components/active";
 import Banner from "../components/banner";
 import News from "../components/new";
 
@@ -11,10 +10,7 @@ const HomePage = {
             <div class="news">
                 ${News.render()}
             </div>
-            <div class="active">
-                ${Active.render()}
-                
-            </div>
+          
         `;
     },
 };
