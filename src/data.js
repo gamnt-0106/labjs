@@ -1,6 +1,6 @@
 // 20220111111403
 // https://5e79b4b817314d00161333da.mockapi.io/posts
-export default [
+const data = [
     {
         createdAt: "2022-01-10T07:26:52.549Z",
         title: "Annie Stroman",
@@ -121,3 +121,4 @@ export default [
         id: "17",
     },
 ];
+export default data;

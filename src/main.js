@@ -1,59 +1,66 @@
 import Navigo from "navigo";
+import Footer from "./components/footer";
+import Header from "./components/header";
 import AboutPage from "./pages/about";
-import Dashboard from "./pages/admin/dashboard";
-import AdminNewsPage from "./pages/admin/news";
 import DetailPage from "./pages/detail";
 import HomePage from "./pages/home";
 import ProductPage from "./pages/product";
+import AdminNewPage from "./pages/admin/news";
+import editNews from "./pages/admin/edit";
 import Signup from "./pages/signup";
+import Signin from "./pages/signin";
+import Dashboard from "./pages/admin/dashboard";
+import NewList from "./components/admin/newList";
+import AddProduct from "./pages/admin/add";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = async (content, id) => {
-    document.querySelector("#app").innerHTML = await content.render(id);
-    if (content.afterRender) content.afterRender();
+const print = (content) => {
+    document.querySelector("#header").innerHTML = Header.render();
+    document.querySelector("#app").innerHTML = content;
+    document.querySelector("#footer").innerHTML = Footer.render();
 };
 
 router.on({
-    "/": () => print(HomePage),
-    "/about": () => print(AboutPage),
-    "/product": () => print(ProductPage),
-    "/signup": () => print(Signup),
-    "/product/:id": ({ data }) => print(DetailPage, data.id),
-    "/admin/dashboard": () => print(Dashboard),
-    "/admin/news": () => print(AdminNewsPage),
+    "/": () => {
+        print(HomePage.render());
+    },
+    "/about": () => {
+        print(AboutPage.render());
+    },
+    "/product": () => {
+        print(ProductPage.render());
+    },
+    "/product/:id": ({ data }) => {
+        const { id } = data;
+        print(DetailPage.render(id));
+    },
+    "/admin/product": () => {
+        print(AdminNewPage.render());
+    },
+    "/admin/product/edit/:id": ({ data }) => {
+        const { id } = data;
+        print(editNews.render(id));
+    },
+    "/signup": () => {
+        print(Signup.render());
+    },
+    "/signin": () => {
+        print(Signin.render());
+    },
+    "/admin/newList": () => {
+        print(NewList.render());
+    },
+    "/admin/dashboard": () => {
+        print(Dashboard.render());
+    },
+    "/admin/add": () => {
+        print(AddProduct.render());
+    },
 });
 
 router.resolve();
 
-// Callback
-// Promise
-// Async/await
-// API
-// Test API
-// JS làm việc với API
-
-// const getProduct = () => new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         try {
-//             resolve([1,2,3,4])
-//         } catch (error) {
-//             reject("Ket noi khong thanh cong")
-//         }
-//     }, 3000)
-// });
-
-// // getProduct
-// //     .then(result => [...result, 5])
-// //     .then(data => console.log(data))
-// //     .catch(error => console.log(error))
-
-// const showProduct = async () => {
-//     const result = await getProduct();
-//     const data = await [...result, 5];
-//     console.log(data);
-// }
-// showProduct();
 // class KhuanBanh {
 //     constructor(luongDuong, luongBot) {
 //         this.luongDuong = luongDuong;
