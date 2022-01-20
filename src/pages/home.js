@@ -1,16 +1,24 @@
 import Banner from "../components/banner";
-import News from "../components/new";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import News from "../components/news";
 
 const HomePage = {
-    render() {
+    async render() {
         return /* html */`
-            <div class="banner">
-                ${Banner.render()}
-            </div>
-            <div class="news">
-                ${News.render()}
-            </div>
-          
+        <div class="max-w-5xl mx-auto">
+            ${Header.render()}
+            <main>
+                <div class="banner">
+                    ${Banner.render()}
+                </div>
+                <div class="news">
+                    ${await News.render()}
+                </div>
+            </main>
+            ${Footer.render()}
+        </div>
+            
         `;
     },
 };
