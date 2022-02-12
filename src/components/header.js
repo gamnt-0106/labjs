@@ -1,29 +1,24 @@
 const Header = {
     render() {
-        return `
-        <div class="header_top bg-[#272f54] py-[13px]">
-        <a href=""><img src="https://i.imgur.com/5EK1lFm.png" alt="" class="m-auto"></a>
-    </div>
-        <div class="bg-orange-500 flex ">
+        return /* html */`
+        <div class="bg-orange-500">
             <ul class="flex">
-            <li><a href="/" class="block px-4 ml-4 py-5 hover:bg-indigo-500 hover:text-orange-700 text-white">Trang chủ</a></li>
-            <li><a href="/product" class="block px-4 py-5 hover:bg-indigo-500 hover:text-orange-700 text-white">Chương trình đào tạo</a></li>
-            <li><a href="/product" class="block px-4 py-5 hover:bg-indigo-500 hover:text-orange-700 text-white">Góc sinh viên</a></li>
-            <li><a href="/admin/dashboard" class="block px-6 py-5 hover:bg-indigo-500 hover:text-orange-700 text-white">Admin</a></li>
+            <li><a href="/" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Home Page</a></li>
+            <li><a href="/#/about" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">About Page</a></li>
+            <li><a href="/#/product" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Product Page</a></li>
+            <li><a href="/#/admin/dashboard" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Dashboard Page</a></li>
+            <li><a href="/#/signup" class=" block px-4 py-5 hover:bg-indigo-500 hover:text-white ">Signup</a></li>
+            <li><a href="/#/signin" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Signin</a></li>
             </ul>
-            <form action="" class="from-search ml-28 pt-4">
-            <input type="text" class="">
-           
-          </form>
-          <ul class="flex">
-          <li><a href="/signup" class="block px-4 ml-4 py-5 hover:bg-indigo-500 hover:text-orange-700 text-white">Sigin</a></li>
-          <li><a href="/signin" class="block px-4 py-5 hover:bg-indigo-500 hover:text-orange-700 text-white">Signup</a></li>
-         
-          </ul>
+            <ul class="flex">
+            <li><a  id="account-email" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white"></a></li>
+        </ul>
         </div>
-       
-
         `;
+    },
+    afterRender() {
+        const user = JSON.parse(localStorage.getItem("user"));
+        document.querySelector("#account-email").innerHTML = user.email;
     },
 };
 export default Header;
