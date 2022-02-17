@@ -7,7 +7,9 @@ const HomePage = {
     async render() {
         return /* html */`
         <div class="max-w-6xl mx-auto">
-            ${Header.render()}
+            <div id="header">
+                ${Header.render()}
+            </div>
             <main>
                 <div class="banner">
                     ${Banner.render()}
@@ -15,11 +17,15 @@ const HomePage = {
                 <div class="news">
                     ${await News.render()}
                 </div>
+               
             </main>
             ${Footer.render()}
         </div>
             
         `;
+    },
+    afterRender() {
+        Header.afterRender();
     },
 };
 export default HomePage;

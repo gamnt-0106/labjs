@@ -1,5 +1,7 @@
+import AdminNewsPage from ".";
 import { get, update } from "../../../api/post";
 import AdminNav from "../../../components/AdminNav";
+import { reRender } from "../../../utils";
 
 const AdminEditPost = {
     async render(id) {
@@ -61,6 +63,8 @@ const AdminEditPost = {
                 img: document.querySelector("#img-post").value,
                 desc: document.querySelector("#desc-post").value,
             });
+            window.location.href = "/admin/news";
+            reRender(AdminNewsPage, "#app");
         });
     },
 };

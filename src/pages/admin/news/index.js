@@ -16,7 +16,7 @@ const AdminNewsPage = {
                     <div class="lg:flex lg:items-center lg:justify-between">
                         <div class="flex-1 min-w-0">
                             <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
-                                Back End Developer
+                               Danh mục bài viết
                             </h2>
                         </div>
                         <div class="mt-5 flex lg:mt-0 lg:ml-4">
@@ -59,7 +59,7 @@ const AdminNewsPage = {
                                                                 ${post.title}
                                                             </td>
                                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                            ${post.img}
+                                                            <img class="w-[200px]" src=" ${post.img}" alt="">
                                                              </td>
                                                             <td class="px-6 py-4 whitespace-nowrap">
                                                                 <a href="/#/admin/news/${post.id}/edit">Edit</a>
